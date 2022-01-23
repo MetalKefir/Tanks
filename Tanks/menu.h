@@ -1,5 +1,5 @@
 #pragma once
-#include "Делегаты.h"
+#include "Delegate.h"
 
 // поддержка класса вектор для хранения элементов.
 #include<iostream>
