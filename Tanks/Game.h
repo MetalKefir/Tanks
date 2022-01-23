@@ -181,9 +181,14 @@ public:
 	Game()
 	{
 		for (int i = 0; i < SizeY_; i++)
-			for (int j = 0; j < SizeX_; j++)
-				if (MaskCard_[i][j]) Card_[i][j] = WALL::symbolWall_;
-
+			for (int j = 0; j < SizeX_; j++) {
+				if (MaskCard_[i][j]) {
+					Card_[i][j] = WALL::symbolWall_;
+					continue;
+				}
+				Card_[i][j] = ' ';
+			}
+				
 		player = new Tank(50,60);
 		enemy = new Enemy(10, 5);
 
