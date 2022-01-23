@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include"Enemy.h"
 #include"GameObject.h"
+#pragma execution_character_set("utf-8") 
 
  void GameInfo(Tank &player, Enemy &enemy) {
 		
