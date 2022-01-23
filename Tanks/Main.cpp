@@ -1,10 +1,19 @@
 #include"Game.h"
 #include"menu.h"
+#include <windows.h>
 
 int main() {
 	
 	setlocale(LOCALE_ALL, "");
 	system("mode con cols=130 lines=70");
+
+	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	CONSOLE_CURSOR_INFO     cursorInfo;
+
+	GetConsoleCursorInfo(out, &cursorInfo);
+	cursorInfo.bVisible = false;
+	SetConsoleCursorInfo(out, &cursorInfo);
 
 	Game game;
 	GameDescription description;
